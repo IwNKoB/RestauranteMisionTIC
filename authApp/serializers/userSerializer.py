@@ -24,7 +24,8 @@ class UserSerializer(serializers.ModelSerializer):
             'email':user.email,
             'account':{
                 'id':account.id,
-                'balance':account.lastChangeDate,
+                'balance':account.balance,
+                'lastChangeDate':account.lastChangeDate,
                 'isActive':account.isActive
 
                 }
