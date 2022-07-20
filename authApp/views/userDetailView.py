@@ -1,4 +1,3 @@
-from logging.config import valid_ident
 from django.conf import settings
 from rest_framework import generics,status
 from rest_framework_simplejwt.backends import TokenBackend

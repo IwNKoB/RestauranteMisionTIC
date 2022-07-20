@@ -1,2 +1,2 @@
-from .userCreateView import UserCreateview
+from .userCreateView import UserCreateView
 from .userDetailView import UserDetailView
