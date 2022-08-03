@@ -1,6 +1,4 @@
-from ast import mod
-import email
-from unicodedata import name
+
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, BaseUserManager
 from django.contrib.auth.hashers import make_password
@@ -10,19 +8,19 @@ class UserManager(BaseUserManager):
         """Crea y salva un usuario con un nombre y contraseña dada"""
         if not username:
             raise ValueError('Users must have an username')
-            user = self.model(username=username)
-            user.set_password(password)
-            user.save(using=self._db)
-            return user
+        user = self.model(username=username)
+        user.set_password(password)
+        user.save(using=self._db)
+        return user
 
     def create_superuser(self, username, password):
         """Crea y salva un usuario con un nombre y contraseña dada"""
         if not username:
             raise ValueError('Users must have an username')
-            user = self.create_user(username=username, password=password,)
-            user.set_password(password)
-            user.save(using=self._db)
-            return user
+        user = self.create_user(username=username, password=password,)
+        user.set_password(password)
+        user.save(using=self._db)
+        return user
 
 class User(AbstractBaseUser,PermissionsMixin):
     id=models.BigAutoField(primary_key=True)

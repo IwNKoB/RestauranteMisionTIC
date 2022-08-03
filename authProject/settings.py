@@ -28,7 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-CORS_ALLOW_ALL_ORIGIN = True
+CORS_ALLOW_ALL_ORIGINS = True
 
 
 # Application definition
@@ -105,11 +105,11 @@ WSGI_APPLICATION = 'authProject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE':'django.db.backends.postgresql',
-        'NAME':'d7v2jjm0t4ouvg',
-        'USER':'gighjhaffyhcas',
-        'PASSWORD':'144f84e3973f4f47c13e80394fe9804ee852af2d02483d8df793fe7c971896a0',
+        'NAME':'df522ic4dbgvm1',
+        'USER':'bhohklocdhbywx',
+        'PASSWORD':'c1bf1f9247c0fc14a01916a03c16f7d695bbfb5c1ab6caabd7dbcfc60372e1fb',
         'PORT':'5432',
-        'HOST':'ec2-3-217-14-181.compute-1.amazonaws.com',
+        'HOST':'ec2-52-204-157-26.compute-1.amazonaws.com',
     }
 }
 
