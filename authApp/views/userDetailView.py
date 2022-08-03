@@ -13,6 +13,7 @@ class UserDetailView(generics.RetrieveAPIView):
     permission_classes=(IsAuthenticated,)
 
     def get(self,request,*args,**kwargs):
+        
         token=request.META.get('HTTP_AUTHORIZATION')[7:]
         tokenBackend= TokenBackend(algorithm=settings.SIMPLE_JWT['ALGORITHM'])
         valid_data=tokenBackend.decode(token,verify=False)
