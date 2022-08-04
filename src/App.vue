@@ -6,7 +6,7 @@
         <button v-if="is_auth" v-on:click = "loadHome">Inicio</button>
         <button v-if="is_auth" v-on:click = "logOut">Cerrar Sesión</button>
         <button v-if="!is_auth" v-on:click="loadLogIn">Iniciar Sesión</button>
-        <button v-if="!is_auth" v-on:click="loadSingUp">Registrarse</button>
+        <button v-if="!is_auth" v-on:click="loadSignUp">Registrarse</button>
         <button v-if="is_auth" v-on:click="loadAccount">Cuenta</button>
       </nav>
     </div>
@@ -14,7 +14,7 @@
   <div class="main-component">
     <router-view
       v-on:completedLogIn = "completedLogIn"
-      v-on:completedSingUp = "completedSingUp"
+      v-on:completedSignUp = "completedSignUp"
       v-on:logOut= "logOut">
     </router-view>
   </div>
@@ -45,7 +45,7 @@
           this.$router.push({name: "logIn"})
         },
         
-        loadSingUp: function(){
+        loadSignUp: function(){
           this.$router.push({name: "signUp"})
         },
 

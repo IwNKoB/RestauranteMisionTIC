@@ -33,15 +33,15 @@
                     "https://misiontic-bank-db-c3g3p2.herokuapp.com/user/logIn/",
                     this.user,
                     {headers:{}}
-                ).then((result) => {
+                    ).then((result) => {
                     let dataLogin = {
                         username: this.user.username,
                         token_access: result.data.access,
                         token_refresh: result.data.refresh,
                     }
                     this.$emit('completedLogIn', dataLogin)
-                })
-                .catch((error)=>{
+                    })
+                    .catch((error)=>{
                     if(error.response.status == "401")
                         alert("ERROR 401: Credenciales Incorrectas.");
                 })
