@@ -32,5 +32,5 @@ class User(AbstractBaseUser,PermissionsMixin):
         self.password=make_password(self.password, some_salt)
         super().save(**kwargs)
 
-    objects: UserManager()
+    objects = UserManager()
     USERNAME_FIELD='username'
